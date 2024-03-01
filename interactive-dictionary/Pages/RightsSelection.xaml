@@ -1,0 +1,21 @@
+﻿<Page x:Class="Exersare.Pages.RightsSelection"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Exersare.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="720" d:DesignWidth="1280"
+      Title="RightsSelection">
+
+    <Grid Background="#0d1e25">
+        <StackPanel Orientation="Vertical" Margin="0 100 0 0">
+            <TextBlock HorizontalAlignment="Center" Foreground="White" FontSize="40" FontWeight="Bold">MyDex</TextBlock>
+            <Image x:Name="imgLogo" Source="D:\repos\interactive-dictionary\interactive-dictionary\images\logo.png" Width="200" Height="100"/>
+        </StackPanel>
+        <StackPanel x:Name="userTypeChoicePanel" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 0 0 0" Orientation="Horizontal" Height="40">
+            <Button x:Name="UserBtn" Width="300" Height="Auto" Background="White" Content="Continue as user" FontSize="20" Margin="0 0 10 0" Click="UserBtn_Click"></Button>
+            <Button x:Name="AdminBtn" Width="300" Height="Auto" Background="White" Content="Continue as administrator" FontSize="20" Margin="0 0 0 0" Click="AdminBtn_Click"></Button>
+        </StackPanel>
+    </Grid>
+</Page>

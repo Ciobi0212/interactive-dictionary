@@ -13,18 +13,22 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Exersare
+namespace Exersare.Pages
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Dictionary.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Dictionary : Page
     {
-        public MainWindow()
+        public Dictionary()
         {
             InitializeComponent();
-            
         }
 
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Navigate back to the RightsSelection page
+            this.NavigationService.Navigate(new Uri("Pages/RightsSelection.xaml", UriKind.Relative));
+        }
     }
 }

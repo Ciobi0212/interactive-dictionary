@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace interactive_dictionary.Properties
+namespace Exersare.Properties
 {
 
 

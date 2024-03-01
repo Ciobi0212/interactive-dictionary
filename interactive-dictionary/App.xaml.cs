@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace interactive_dictionary
+namespace Exersare
 {
     /// <summary>
     /// Interaction logic for App.xaml

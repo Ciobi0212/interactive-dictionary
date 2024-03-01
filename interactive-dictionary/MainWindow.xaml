@@ -1,15 +1,13 @@
-﻿<Window x:Class="interactive_dictionary.MainWindow"
+﻿<Window x:Class="Exersare.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:interactive_dictionary"
+        xmlns:local="clr-namespace:Exersare"
+        xmlns:pages="clr-namespace:Exersare.Pages"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Canvas>
-        <Button>bUTTON1</Button>
-        <Button>bUTTON1</Button>
-        <Button>bUTTON1</Button>
-        <Button>bUTTON1</Button>
-    </Canvas>
+        Title="MainWindow" Height="720" Width="1280">
+    <Grid Background="#0d1e25">
+        <Frame x:Name="MainFrame" Source="Pages/RightsSelection.xaml" NavigationUIVisibility="Hidden"/>
+    </Grid>
 </Window>
