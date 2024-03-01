@@ -12,17 +12,20 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Exersare.Classes;
 
 namespace Exersare.Pages
 {
-    /// <summary>
-    /// Interaction logic for Dictionary.xaml
-    /// </summary>
     public partial class Dictionary : Page
     {
         public Dictionary()
         {
             InitializeComponent();
+
+            if(ApplicationState.isAdmin)
+            {
+                adminMode.Visibility = Visibility.Visible;
+            }
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)

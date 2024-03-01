@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Exersare.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,7 @@ namespace Exersare.Pages
         public RightsSelection()
         {
             InitializeComponent();
+            ApplicationState.isAdmin = false;
         }
 
         private void AdminBtn_Click(object sender, RoutedEventArgs e)

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Exersare.Classes;
 
 namespace Exersare.Pages
 {
@@ -29,6 +30,31 @@ namespace Exersare.Pages
         {
             // Navigate back to the RightsSelection page
             this.NavigationService.Navigate(new Uri("Pages/RightsSelection.xaml", UriKind.Relative));
+        }
+
+        private void btnLogin_Click(object sender, RoutedEventArgs e)
+        {
+            var admins = AdminList.readAdminData("D:\\repos\\interactive-dictionary\\interactive-dictionary\\JSON\\admins_data.json");
+            bool found = false;
+
+            foreach(var admin in admins.Admins)
+            {
+                if(admin.Username == tbUsername.Text && admin.Password == tbPassword.Password)
+                {
+                    ApplicationState.isAdmin = true;
+                    this.NavigationService.Navigate(new Uri("Pages/Dictionary.xaml", UriKind.Relative));
+                    found = true;
+                    break;
+                }
+            }
+
+            if(!found)
+            {
+                MessageBox.Show("Incorrect credentials! Please try again.");
+                ApplicationState.isAdmin = false;
+            }
+
+            
         }
     }
 }
