@@ -1,0 +1,16 @@
+{
+  "words": [
+    {
+      "Name": "Babuin",
+      "Description": "Cunoscut pentru culoarea distinctivă roșie a posteriorului său, acest membru al familiei primate trăiește în grupuri mari în Africa.",
+      "CategoryName": "Maimute",
+      "ImagePath": "ImagePathForBabuin"
+    },
+    {
+      "Name": "Capucin",
+      "Description": "Acest primate mic, cu o față expresivă, este adesea antrenat pentru a ajuta persoanele cu dizabilități, datorită inteligenței sale remarcabile.",
+      "CategoryName": "Maimute",
+      "ImagePath": "ImagePathForCapucin"
+    }
+  ]
+}

@@ -17,7 +17,7 @@
                 HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20" Width="100" Height="50" FontSize="40" FontWeight="Bold" Foreground="White" Background="#0d1e25" BorderBrush="#0d1e25" Click="BackButton_Click"/>
         <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center" Margin="200">
             <TextBlock Foreground="White" FontSize="30" FontWeight="Bold" Margin="10"> Search word: </TextBlock>
-            <TextBox Foreground="White" FontSize="30" FontWeight="Bold" Width="500"> </TextBox>
+            <TextBox Foreground="Black" FontSize="30" FontWeight="Bold" Width="500"> </TextBox>
         </StackPanel>
     </Grid>
 </Page>
