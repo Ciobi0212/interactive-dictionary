@@ -9,13 +9,16 @@
       Title="RightsSelection">
 
     <Grid Background="#0d1e25">
-        <StackPanel Orientation="Vertical" Margin="0 100 0 0">
+        <StackPanel Orientation="Vertical" Margin="0 30 0 0">
             <TextBlock HorizontalAlignment="Center" Foreground="White" FontSize="40" FontWeight="Bold">MyDex</TextBlock>
             <Image x:Name="imgLogo" Source="D:\repos\interactive-dictionary\interactive-dictionary\images\logo.png" Width="200" Height="100"/>
         </StackPanel>
-        <StackPanel x:Name="userTypeChoicePanel" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 0 0 0" Orientation="Horizontal" Height="40">
-            <Button x:Name="UserBtn" Width="300" Height="Auto" Background="White" Content="Continue as user" FontSize="20" Margin="0 0 10 0" Click="UserBtn_Click"></Button>
-            <Button x:Name="AdminBtn" Width="300" Height="Auto" Background="White" Content="Continue as administrator" FontSize="20" Margin="0 0 0 0" Click="AdminBtn_Click"></Button>
+        <StackPanel x:Name="userTypeChoicePanel" VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Vertical" Height="144">
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="UserBtn" Width="300" Height="50" Background="White" Content="Continue as user" FontSize="20" Margin="0 0 10 0" Click="UserBtn_Click"></Button>
+                <Button x:Name="AdminBtn" Width="300" Height="50" Background="White" Content="Continue as administrator" FontSize="20" Margin="0 0 0 0" Click="AdminBtn_Click"></Button>
+            </StackPanel>
+            <Button x:Name="GameBtn" Width="300" Height="50" Background="White" Content="Play a word guessing game" FontSize="20" Margin="0 30 0 0"  Click="GameBtn_Click"></Button>
         </StackPanel>
     </Grid>
 </Page>

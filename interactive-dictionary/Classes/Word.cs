@@ -8,10 +8,18 @@ namespace Exersare.Classes
 {
     public class Word
     {
-        private string Name { get; set; }
-        private string CategoryName { get; set; }
-        private string Description { get; set; }
-        private string ImagePath { get; set; }
+        public string Name { get; set; }
+        public string CategoryName { get; set; }
+        public string Description { get; set; }
+        public string ImagePath { get; set; }
+
+        public Word()
+        {
+            Name = "";
+            CategoryName = "";
+            Description = "";
+            ImagePath = "";
+        }
 
         [JsonConstructor]
         public Word(string name, string categoryName, string description, string imagePath)
@@ -21,18 +29,15 @@ namespace Exersare.Classes
             Description = description;
             ImagePath = imagePath;
 
-            ApplicationState.categories[categoryName].Add(this);
+            ApplicationState.categoriesMap[categoryName].Add(this);
+
+            ApplicationState.categoriesMap["All"].Add(this);
         }
-    }
 
-    public class WordList
-    {
-        public List<Word> Words { get; set; }
-
-        public static WordList readWordData(string filePath)
+        public static List<Word> readWordData(string filePath)
         {
             string json = System.IO.File.ReadAllText(filePath);
-            WordList words = Newtonsoft.Json.JsonConvert.DeserializeObject<WordList>(json);
+            List<Word> words = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Word>>(json);
             return words;
         }
     }

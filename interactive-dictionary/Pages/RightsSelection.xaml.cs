@@ -38,5 +38,11 @@ namespace Exersare.Pages
             // Navigate to Dictionary Page
             this.NavigationService.Navigate(new Uri("Pages/Dictionary.xaml", UriKind.Relative));
         }
+
+        private void GameBtn_Click(object sender, RoutedEventArgs e)
+        {
+            // Navigate to the Game page
+            this.NavigationService.Navigate(new Uri("Pages/Game.xaml", UriKind.Relative));
+        }
     }
 }

@@ -12,21 +12,12 @@ namespace Exersare.Classes
     {
         public string Username { get; set; }
         public string Password { get; set; }
-    }
-
-    public class AdminList
-    {
-        public List<Admin> Admins { get; set; }
-
-        public static AdminList readAdminData(string filePath)
+        public static List<Admin> readAdminData(string filePath)
         {
             string json = File.ReadAllText(filePath);
-            AdminList admins = JsonConvert.DeserializeObject<AdminList>(json);
+            List<Admin> admins = JsonConvert.DeserializeObject<List<Admin>>(json);
             return admins;
         }
     }
-
-
-   
     
 }

@@ -13,7 +13,7 @@
         <Button Content="←"  
                 HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20" Width="100" Height="50" FontSize="40" FontWeight="Bold" Foreground="White" Background="#0d1e25" BorderBrush="#0d1e25"
                 Click="btnBack_Click"/>
-        <StackPanel Orientation="Vertical" Margin="0 100 0 0">
+        <StackPanel Orientation="Vertical" Margin="0 30 0 0">
             <TextBlock HorizontalAlignment="Center" Foreground="White" FontSize="40" FontWeight="Bold">MyDex</TextBlock>
             <Image x:Name="imgLogo" Source="D:\repos\interactive-dictionary\interactive-dictionary\images\logo.png" Width="200" Height="100"/>
         </StackPanel>

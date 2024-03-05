@@ -1,16 +1,1 @@
-{
-  "words": [
-    {
-      "Name": "Babuin",
-      "Description": "Cunoscut pentru culoarea distinctivă roșie a posteriorului său, acest membru al familiei primate trăiește în grupuri mari în Africa.",
-      "CategoryName": "Maimute",
-      "ImagePath": "ImagePathForBabuin"
-    },
-    {
-      "Name": "Capucin",
-      "Description": "Acest primate mic, cu o față expresivă, este adesea antrenat pentru a ajuta persoanele cu dizabilități, datorită inteligenței sale remarcabile.",
-      "CategoryName": "Maimute",
-      "ImagePath": "ImagePathForCapucin"
-    }
-  ]
-}
+[{"Name":"Babuin","CategoryName":"Maimute","Description":"Cunoscut pentru culoarea distinctivă roșie a posteriorului său, acest membru al familiei primate trăiește în grupuri mari în Africa.","ImagePath":"D:\\repos\\interactive-dictionary\\interactive-dictionary\\WordImages\\babuin.jpg"},{"Name":"Cezar","CategoryName":"Maimute","Description":"E simplu, e elegant.","ImagePath":"file:///C:/Users/cioba/OneDrive/Desktop/Cezar.jpg"}]

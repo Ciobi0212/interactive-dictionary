@@ -69,12 +69,21 @@
     <Compile Include="Classes\Admin.cs" />
     <Compile Include="Classes\ApplicationState.cs" />
     <Compile Include="Classes\Categories.cs" />
+    <Compile Include="Classes\GameState.cs" />
     <Compile Include="Classes\Word.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Pages\Dictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Edit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Game.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -90,6 +99,12 @@
   <ItemGroup>
     <Compile Include="Pages\Dictionary.xaml.cs">
       <DependentUpon>Dictionary.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Edit.xaml.cs">
+      <DependentUpon>Edit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Game.xaml.cs">
+      <DependentUpon>Game.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
@@ -127,7 +142,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="WordImages\" />
+    <Resource Include="WordImages\raluca.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WordImages\babuin.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

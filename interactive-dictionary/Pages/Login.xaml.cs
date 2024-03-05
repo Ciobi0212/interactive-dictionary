@@ -34,10 +34,9 @@ namespace Exersare.Pages
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            var admins = AdminList.readAdminData("D:\\repos\\interactive-dictionary\\interactive-dictionary\\JSON\\admins_data.json");
             bool found = false;
 
-            foreach(var admin in admins.Admins)
+            foreach(var admin in ApplicationState.admins)
             {
                 if(admin.Username == tbUsername.Text && admin.Password == tbPassword.Password)
                 {

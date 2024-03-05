@@ -7,15 +7,20 @@ using System.Threading.Tasks;
 
 namespace Exersare.Classes
 {
-    public class CategoryMap
+    public class Category
     {
-        public Dictionary<string, List<Word>> Categories { get; set; }
-
-        public static CategoryMap readCategoryData(string filePath)
+        public static Dictionary<string, List<Word>> readCategoryData(string filePath)
         {
             string json = System.IO.File.ReadAllText(filePath);
-            CategoryMap categories = Newtonsoft.Json.JsonConvert.DeserializeObject<CategoryMap>(json);
-            return categories;
+            List<string> names = Newtonsoft.Json.JsonConvert.DeserializeObject<List<string>>(json);
+            Dictionary<string, List<Word>> Categories = new Dictionary<string, List<Word>>();
+
+            foreach (string name in names)
+            {
+                Categories.Add(name, new List<Word>());
+            }
+
+            return Categories;
         }
     }
 }

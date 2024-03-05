@@ -9,15 +9,38 @@
       Title="Dictionary">
 
     <Grid Background="#0d1e25">
-        <StackPanel x:Name="adminMode" Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Right" Visibility="Collapsed">
-            <TextBlock Foreground="White" FontSize="20" Margin="0 0 20 0">Admin Mode: </TextBlock>
-            <TextBlock Foreground="LightGreen" FontSize="20" FontWeight="Bold" Margin="0 0 20 0">ON</TextBlock>
+        <StackPanel Orientation="Vertical" Margin="0 30 0 0">
+            <TextBlock HorizontalAlignment="Center" Foreground="White" FontSize="40" FontWeight="Bold">MyDex</TextBlock>
+            <Image x:Name="imgLogo" Source="D:\repos\interactive-dictionary\interactive-dictionary\images\logo.png" Width="200" Height="100"/>
         </StackPanel>
-        <Button Content="←"  
-                HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20" Width="100" Height="50" FontSize="40" FontWeight="Bold" Foreground="White" Background="#0d1e25" BorderBrush="#0d1e25" Click="BackButton_Click"/>
-        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center" Margin="200">
-            <TextBlock Foreground="White" FontSize="30" FontWeight="Bold" Margin="10"> Search word: </TextBlock>
-            <TextBox Foreground="Black" FontSize="30" FontWeight="Bold" Width="500"> </TextBox>
+        <StackPanel x:Name="adminMode" Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,10,10,0" Width="179" Visibility="Collapsed">
+            <TextBlock Foreground="LightGreen" FontSize="20" Margin="0 0 20 0">Admin Mode: ON</TextBlock>
+            <Button Content="Add Word" Width="100" Height="50" FontSize="20" FontWeight="Bold" Foreground="White" Background="#0d1e25" BorderBrush="#0d1e25" Click="AddWordButton_Click"/>
+        </StackPanel>
+        <Button Content="←" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20" Width="100" Height="50" FontSize="40" FontWeight="Bold" Foreground="White" Background="#0d1e25" BorderBrush="#0d1e25" Click="BackButton_Click"/>
+
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,149,0,0" Height="166">
+            <StackPanel>
+                <TextBlock Foreground="White" FontSize="30" FontWeight="Bold" Margin="10"><Run Text="Search word:"/></TextBlock>
+                <TextBox x:Name="txSearchBox" Foreground="Black" FontSize="30" FontWeight="Bold" Width="500" TextChanged="txSearchBox_TextChanged"/>
+                <ListBox x:Name="suggestionsBox" DisplayMemberPath="Name" FontSize="20" Visibility="Collapsed" SelectionChanged="suggestionsBox_SelectionChanged"/>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Margin="40 0 0 0">
+                <TextBlock Foreground="White" FontSize="30" FontWeight="Bold" Margin="10"><Run Text="Category:"/></TextBlock>
+                <ComboBox x:Name="cbCategory" Width="300" Height="40" FontSize="15" FontWeight="Bold" SelectionChanged="cbCategory_SelectionChanged"/>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel x:Name="wordInfo" VerticalAlignment="Top" HorizontalAlignment="Center" Orientation="Horizontal" Height="433" Margin="0,277,0,0">
+            <Image x:Name="imgWord" Source="{Binding ImagePath}" Margin="30" Width="300" Height="300"></Image>
+            <StackPanel Orientation="Vertical" Margin="30">
+                <TextBlock x:Name="txWordName" Foreground="White" FontSize="40" FontWeight="Bold" Margin="10" Text="{Binding Name}"/>
+                <TextBlock x:Name="txCategoryNameWord" Foreground="White" FontSize="30" FontWeight="Bold" Margin="10" Text="{Binding CategoryName}"/>
+                <TextBlock x:Name="txDefinitionWord" Foreground="White" FontSize="20" Margin="10" Width="300" Text="{Binding Description}" TextWrapping="Wrap"/>
+                <Button x:Name="btnEdit" Content="Edit Word" Width="100" Height="50" FontSize="20" FontWeight="Bold" Foreground="White" Background="#0d1e25" BorderBrush="#0d1e25" Click="EditWordButton_Click" Visibility="Collapsed"/>
+                <Button x:Name="btnDelete" Content="Delete Word" Width="150" Height="50" FontSize="20" FontWeight="Bold" Foreground="Red" Background="#0d1e25" BorderBrush="#0d1e25" Click="DeleteWordButton_Click" Visibility="Collapsed"/>
+            </StackPanel>
+
         </StackPanel>
     </Grid>
 </Page>
