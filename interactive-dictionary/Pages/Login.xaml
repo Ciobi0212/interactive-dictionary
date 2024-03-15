@@ -15,7 +15,7 @@
                 Click="btnBack_Click"/>
         <StackPanel Orientation="Vertical" Margin="0 30 0 0">
             <TextBlock HorizontalAlignment="Center" Foreground="White" FontSize="40" FontWeight="Bold">MyDex</TextBlock>
-            <Image x:Name="imgLogo" Source="D:\repos\interactive-dictionary\interactive-dictionary\images\logo.png" Width="200" Height="100"/>
+            <Image x:Name="imgLogo" Source="E:\repos\interactive-dictionary\images\logo.png" Width="200" Height="100"/>
         </StackPanel>
         
         <StackPanel x:Name="loginPanel" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 80 0 0">

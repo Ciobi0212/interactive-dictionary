@@ -27,8 +27,26 @@ namespace Exersare.Pages
 
             // Set the DataContext of the page to the ApplicationState
             GameState.newWords();
+            GameState.advanceGame(null);
 
-            this.DataContext = GameState.guessingWords[GameState.indexOfWord];
+            this.DataContext = GameState.currentWord;
+
+            if (GameState.showImage)
+            {
+                imgWord.Visibility = Visibility.Visible;
+                descWord.Visibility = Visibility.Collapsed;
+
+            }
+            else
+            {
+                imgWord.Visibility = Visibility.Collapsed;
+                descWord.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void showWordInfo()
+        {
+            this.DataContext = GameState.currentWord;
 
             if (GameState.showImage)
             {
@@ -57,19 +75,7 @@ namespace Exersare.Pages
                 GameState.resetGame();
             }
 
-            this.DataContext = GameState.currentWord;
-
-            if(GameState.showImage)
-            {
-                imgWord.Visibility = Visibility.Visible;
-                descWord.Visibility = Visibility.Collapsed;
-         
-            }
-            else
-            {
-                imgWord.Visibility = Visibility.Collapsed;
-                descWord.Visibility = Visibility.Visible;
-            }
+            showWordInfo();
         }
 
         private void btnBack_Click(object sender, RoutedEventArgs e)
@@ -80,7 +86,7 @@ namespace Exersare.Pages
                 GameState.resetGame();
             }
 
-            this.DataContext = GameState.currentWord;
+            showWordInfo();
             btnNext_Finish.Content = "Next";
         }
     }

@@ -45,6 +45,12 @@ namespace Exersare.Pages
         private void btnEdit_Click(object sender, RoutedEventArgs e)
         {
             // Add new category if it doesn't exist and set CategoryName to the selected word
+            if (txtEditName.Text == "" || txtEditDescription.Text == "" || (cmbEditCategory.SelectedItem == null && txtNewCategory.Text == ""))
+            {
+                MessageBox.Show("Please fill the fields before editing");
+                return;
+            }
+
             if (cmbEditCategory.SelectedItem == null) 
             {
                 ApplicationState.categoriesMap.Add(txtNewCategory.Text, new List<Word>());

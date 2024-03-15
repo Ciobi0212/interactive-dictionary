@@ -15,7 +15,7 @@
 
         <StackPanel Orientation="Vertical" >
             <TextBlock Text="Guess the word" FontSize="40" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <Image x:Name="imgLogo" Source="D:\repos\interactive-dictionary\interactive-dictionary\images\logo.png" Width="200" Height="100"/>
+            <Image x:Name="imgLogo" Source="E:\repos\interactive-dictionary\images\logo.png" Width="200" Height="100"/>
         </StackPanel>
 
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Height="325" Width="431">

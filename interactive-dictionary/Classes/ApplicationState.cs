@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,9 +18,9 @@ namespace Exersare.Classes
             isAdding = false;
 
             // Read data from JSON files
-            categoriesMap = Category.readCategoryData("D:\\repos\\interactive-dictionary\\interactive-dictionary\\JSON\\Categories.json");
-            words = Word.readWordData("D:\\repos\\interactive-dictionary\\interactive-dictionary\\JSON\\Words.json");
-            admins = Admin.readAdminData("D:\\repos\\interactive-dictionary\\interactive-dictionary\\JSON\\admins_data.json");
+            categoriesMap = Category.readCategoryData(Path.Combine(Environment.CurrentDirectory, "..\\..\\JSON\\Categories.json" ));
+            words = Word.readWordData(Path.Combine(Environment.CurrentDirectory, "..\\..\\JSON\\Words.json"));
+            admins = Admin.readAdminData(Path.Combine(Environment.CurrentDirectory, "..\\..\\JSON\\admins_data.json"));
 
             // Initialize the variables we need for the application
             suggestedWords = new ObservableCollection<Word>();
@@ -30,13 +31,13 @@ namespace Exersare.Classes
         public static void saveData()
         {
             string json = Newtonsoft.Json.JsonConvert.SerializeObject(categoriesMap.Keys);
-            System.IO.File.WriteAllText("D:\\repos\\interactive-dictionary\\interactive-dictionary\\JSON\\Categories.json", json);
+            System.IO.File.WriteAllText(Path.Combine(Environment.CurrentDirectory, "..\\..\\JSON\\Categories.json"), json);
 
             json = Newtonsoft.Json.JsonConvert.SerializeObject(words);
-            System.IO.File.WriteAllText("D:\\repos\\interactive-dictionary\\interactive-dictionary\\JSON\\Words.json", json);
+            System.IO.File.WriteAllText(Path.Combine(Environment.CurrentDirectory, "..\\..\\JSON\\Words.json"), json);
 
             json = Newtonsoft.Json.JsonConvert.SerializeObject(admins);
-            System.IO.File.WriteAllText("D:\\repos\\interactive-dictionary\\interactive-dictionary\\JSON\\admins_data.json", json);
+            System.IO.File.WriteAllText(Path.Combine(Environment.CurrentDirectory, "..\\..\\JSON\\admins_data.json"), json);
         }
         public static bool isAdmin { get; set; }
         public static bool isAdding { get; set; }

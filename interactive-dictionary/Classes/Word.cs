@@ -18,7 +18,7 @@ namespace Exersare.Classes
             Name = "";
             CategoryName = "";
             Description = "";
-            ImagePath = "";
+            ImagePath = "E:\\repos\\interactive-dictionary\\WordImages\\noimg.png";
         }
 
         [JsonConstructor]

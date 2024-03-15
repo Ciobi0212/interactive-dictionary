@@ -147,5 +147,8 @@
   <ItemGroup>
     <Resource Include="WordImages\babuin.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WordImages\noimg.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
